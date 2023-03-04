@@ -1,0 +1,44 @@
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+
+main()
+{
+    float a, b, c, pitagoras;
+    printf("programa que te dice si se puede hacer un apartir de sus lados triangulo y si es rectagulo\n");
+    printf("ingrese primer numero\n");
+    cin >> a;
+    printf("ingrese segundo numero\n");
+    cin >> b;
+    printf("ingrese tercer numero\n");
+    cin >> c;
+    
+    //esto es para descartar numero negativos y el cero ya que con ellos no se puede formar un triangulo
+    if (a <= 0 || c <= 0 || b <= 0)
+        printf("no existen triangulos con lados negativos o con lado 0\n");
+       
+    else
+    {
+        printf(" su triangulo si se puede formar ");
+        if (a > b && a > c)
+        {  b = pow(b,2);
+           c = pow(c,2);
+           a = pow(a,2);
+           pitagoras = b + c;
+           if(pitagoras == a){
+               
+                a = trunc(a);
+                printf("y es rectangulo");
+            }    
+            else    
+                
+            
+        }      
+        
+        else
+        
+    }
+   return 0;
+}
